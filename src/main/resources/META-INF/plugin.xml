@@ -1,0 +1,35 @@
+<idea-plugin>
+    <id>by.kir.my-plugin</id>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <idea-version since-build="162"/>
+    <depends>com.intellij.modules.lang</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="MyPlugin.SampleMenu" text="Greeting" description="Greeting menu" popup="true">
+            <add-to-group group-id="RefactoringMenu" anchor="last"/>
+        </group>
+        <action id="Myplugin.Textboxes" class="by.kir.HelloAction" text="Hello" description="Says hello">
+          <add-to-group group-id="MyPlugin.SampleMenu" anchor="last"/>
+        </action>
+        <action id="Myplugin.Textboxes2" class="by.kir.HelloAction" text="Hello" description="Says hello">
+          <add-to-group group-id="MyPlugin.SampleMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
